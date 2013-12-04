@@ -21,18 +21,17 @@ Histórico de Versões
 
 1. Introdução
 ==============
+O Plano de Gerenciamento de Configuração descreve todas as atividades do Gerenciamento de Controle de Configuração e Mudança que serão executadas durante o ciclo de vida do produto. Suas atividades envolvem identificar a configuração do software, manter sua integridade durante o projeto e controlar sistematicamente as mudanças do projeto de Remoção.
 
-_[A introdução do Plano de Gerenciamento de Configuração  oferece uma visão geral de todo o documento. 
-Ela inclui a finalidade, o escopo, as definições, os acrônimos, as abreviações, as referências e uma visão geral deste
-Plano de Gerenciamento de Configuração.]_
+
 
 1.1 Finalidade
 ---------------
-_[Especifique a finalidade deste Plano de Gerenciamento de Configuração.]_
+Este documento tem por objetivo principal descrever a organização, nomenclatura e regras para o versionamento do projeto Remoção
 
 1.2 Escopo
 ----------
-_[Uma breve descrição do escopo deste Plano de Gerenciamento de Configuração; o modelo ao qual ele está associado e tudo o que é afetado ou influenciado por este documento.]_
+Este documento detalha toda a infra-estrutura utilizada durante o desenvolvimento do projeto Remoção
 
 1.3 Definições, Acrônimos e Abreviações
 ---------------------------------------
