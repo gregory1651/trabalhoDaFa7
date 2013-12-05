@@ -14,7 +14,7 @@ Histórico de Versões
 
 |Data                |Versão       |Descrição               |Autor          |
 |--------------------|-------------|------------------------|---------------|
-|_&lt;dd/mm/aaaa&gt;_|_&lt;1.0&gt;_|_&lt;Versão inicial&gt;_|_&lt;autor&gt;_|
+|   05/12/2013       |    1.0      |   Criação do Documento |Daniel Gregory |
 |_&lt;dd/mm/aaaa&gt;_|_&lt;1.1&gt;_|_&lt;Outra versão&gt;_  |_&lt;autor&gt;_|
 
 
@@ -27,15 +27,20 @@ O Plano de Gerenciamento de Configuração descreve todas as atividades do Geren
 
 1.1 Finalidade
 ---------------
-Este documento tem por objetivo principal descrever a organização, nomenclatura e regras para o versionamento do projeto Remoção
+Este documento tem por objetivo principal descrever a organização, nomenclatura e regras para o versionamento do projeto Remoção, criando um padrão a ser seguido por toda equipe garantindo maior controle do projeto.
 
 1.2 Escopo
 ----------
-Este documento detalha toda a infra-estrutura utilizada durante o desenvolvimento do projeto Remoção
+Este documento detalha toda a infra-estrutura utilizada durante o desenvolvimento do projeto Remoção sendo destinado a todos os participantes do desenvolvimento deste projeto.
 
 1.3 Definições, Acrônimos e Abreviações
 ---------------------------------------
-_[Esta subseção apresenta as definições de todos os termos, acrônimos e abreviações necessários para a correta interpretação do Plano de Gerenciamento de Configuração.  Essas informações podem ser fornecidas mediante referência ao Glossário do projeto.]_
+
+|Termo               |                  Significado                         |
+|--------------------|------------------------------------------------------|
+|--------------------|------------------------------------------------------|
+|--------------------|------------------------------------------------------|
+
 
 1.4 Referências
 ---------------
