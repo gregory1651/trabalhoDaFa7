@@ -74,13 +74,13 @@ As proximas seções deste documento estão organizados da seguinte forma:<br>
 
 2.2 Ferramentas, Ambiente e Infra-estrutura
 -------------------------------------------
-_[Descreva o ambiente de computação e as ferramentas de software a serem utilizadas para desempenhar as funções de CM em todo o ciclo de vida do projeto ou produto._
-_Descreva as ferramentas e os procedimentos necessários utilizados para o controle de versão dos itens de configuração gerados no ciclo de vida do projeto ou produto._
-_As questões envolvidas na configuração do ambiente de CM incluem:_
-* _tamanho previsto dos dados do produto_
-* _distribuição da equipe do produto_
-* _localização física dos servidores e clientes]_
- 
+
+|Ferramenta          |Descrição               |Versão          |
+|--------------------|------------------------|---------------|
+| TortoiseSVN        |  Ferramenta gráfica para gerenciamento no sistema de controle de versão|1.7.11 |
+| Subersion          |  Sistema de Controle de Versão|1.7.8 |
+
+
 
 
 3. O Programa de Gerenciamento de Configuração
