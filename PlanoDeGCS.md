@@ -5,6 +5,7 @@ Plano de Gerenciamento de Configuração
 Versão &lt;1.0&gt;
 ------------------
 
+
 _[Observação: O template a seguir é fornecido para uso com o Rational Unified Process (RUP).  O texto exibido entre colchetes e em itálico foi incluído para orientar o autor e deve ser excluído antes da publicação do documento._
 
 _Este documento utiliza a formatação da linguagem [Markdown] (http://daringfireball.net/projects/markdown/). Você pode encontrar um guia de referência rápido [aqui] (https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).]_
@@ -73,36 +74,103 @@ _As questões envolvidas na configuração do ambiente de CM incluem:_
 ---------------------------------
 ### 3.1.1 Métodos de Identificação
 ----------------------------------
-_[Descreva como os artefatos do projeto ou produto devem ser nomeados, marcados e numerados. O esquema de identificação deve abranger o hardware, o software do sistema, os produtos de terceiros (COTS) e todos os artefatos de desenvolvimento de aplicativos listados na estrutura de diretórios do produto; por exemplo, planos, modelos, componentes, software de teste, resultados e dados, executáveis e assim por diante.]_
+
+####Configurações de Software
+
+|Dado                |Regras                                                                |
+|----------------------|------------------------------------------------------------------  |
+|Tipo                  |Deve ser citado o tipo, ou seja, a finalidade do software.          |
+|Ferramenta            |Deve ser citado o nome do software.                                 |
+|Versão                |Deve ser citada a versão do software.                               |
+|Configuração Software |Deve ser citado:<br>- o nome do software.<br>- a versão do software.|
+
+####Configurações de Hardware
+
+|Dado                  |Regras                                                                            |
+|----------------------|--------------------------------------------------------------------              |
+|Quantidade            |A quantidade deve ser citada com o seguinte padrão: “000”.                        |
+|Ambiente              |Deve ser citado o nome do software.                                               |
+|Configuração Hardware |Deve ser citado: <br> - o clock do processador. <br> - a capacidade da memória ram. <br> - a capacidade do HD. <br> - o ip utilizado.                                                                  |
+|Software Instalados   |- Nome e versão dos softwares instalados.                                         |
+
+####Artefatos
+
+|Artefato              |Regras                                                              |
+|----------------------|--------------------------------------------------------------------------------------|
+|• Plano do Projeto <br>                                                                                                 • Plano de Gerência de Configuração <br>                                                                                • Plano de Testes <br>                                                                                                  • Plano de Implantação <br>                                                                                             • Diagrama de Classes <br>                                                                                              • Diagrama de Casos de Uso <br>                                                                                         • Especificação de Caso de Uso <br>                                                                                     • Cenários de Testes <br>                                                                                               • Casos de Testes <br>                                                                                                  • Sumário de Testes <br> |                                                                                                                   Os artefatos devem seguir o seguinte padrão de identificação: <br>                                                     - Sigla do módulo: “AA”. <br>                                                                                           - Sigla do artefato : “AAA”. <br>                                                                                       - Número da versão da entrega: “v1.0”. <br>                                                                             - Data da emtrega: “dd/mm/yy". <br> <br>                                                                                   Regra de versionamento dos artefatos: <br>                                                                           - À cada correção no artefato deverá ser acrescido mais 1 ao número após o ponto decimal. |
+
+####Software do Sistema
+
+As versões do sistema devem ser geradas com o seguinte padrão: <br> •	Versão: “0” <br> •	Release: “00” <br> •	Build: “000” <br> •	Exemplo: “1.25.131”
+
 
 ### 3.1.2 Itens de Configuração
-_[Relacionar os artefatos ou grupos de artefatos, separando por tipo, modulo ou subsistema, responsável ou momento em que deverão ser incluídos em baselines._
-* _“Inclusão em Baseline” em branco significa que o grupo de artefatos não participará de baseline. Pode ser expresso como uma data ou identificador de uma baseline, fase ou ponto de controle_
-* _“Responsável”: indicar nominalmente, sempre que possível]_
 
-| Item (ou Tipo de Item)                 | Responsável na equipe	     | Inclusão em Baseline |
-|----------------------------------------|-----------------------------|----------------------|
-|_&lt;grupo de itens de configuração&gt;_|_&lt;nome do responsável&gt;_|_&lt;momento a partir do qual o conjunto de artefatos será incluído em baseline&gt;_|
+| Item (ou Tipo de Item)                 |Responsável na equipe	               | Inclusão em Baseline          |
+|----------------------------------------|-------------------------------------|-------------------------------|
+|Planos                                  |Gerente de Projetos                  |Logo após a aprovação do cliente, bem como o sponsor, dependendo do plano referido.|
+|Documentações de Requisitos e Testes    |Líder Técnico e Analista de Testes   |Logo após a aprovação do cliente, bem como o sponsor, dependendo do plano referido.|
+|Código-Fonte                            |Gerente de Projetos e Líder Técnico  |Ao fim da iteração, após a verificação e validação por parte dos responsáveis pela qualidade no software.|
 
 
 ### 3.1.3 Baselines do Projeto
 
-_[As baselines funcionam como um padrão oficial no qual os trabalhos subseqüentes são baseados. Somente mudanças autorizadas podem ser efetuadas nas baselines._
-_Descreva em que pontos do ciclo de vida do projeto ou produto as baselines devem ser estabelecidas. As baselines mais comuns devem ser definidas ao final de cada uma das fases de Iniciação, Elaboração, Construção e Transição. Elas também podem ser geradas no final de iterações ocorridas dentro das várias fases ou com freqüência ainda maior._
-_Descreva quem autoriza uma baseline e o que ela contém.]_
+À cada nova baseline, a identificação da mesma deverá seguir o seguinte padrão: <br>                                    • Baseline de Documentos: "DOC_V_ <versão>" <br>                                                                        • Baseline de Código Fonte: "FONTE_V_ <versão>" <br>                                                                    • Baseline de Releases: "RELEASE_V_ <versão>"
+
+À seguir o momento em que as baselines devem ser geradas:
+
+|Baseline              |Responsável                         |Item                                                      |
+|----------------------|------------------------------------|----------------------------------------------------------|
+|Planejamento          |Gerente de Projetos                 |- Plano do Projeto <br>                                                                                                 - Plano de Gerência de Configuração <br>                                                                                - Plano de Testes <br>                                                                                                  - Plano de Implantação
+|Requisitos            |Analista de Requisitos              |- Diagrama de Classes                                                                                                   - Diagrama de Casos de Uso                                                                                              - Especificações de Casos de Uso
+|Desenvolvimento       |Líder Técnico                       |- Código-Fonte
+|Testes                |Líder Técnico / Analista de Testes  |- Cenários de Testes                                                                                                    - Casos de Testes                                                                                                       - Sumário de Testes
+|Entrega de Release    |Gerente de Projetos                 |- Release do Software do Sistema
+
 
 ### 3.1.4 Estrutura do Repositório de Versões
-_[Descreva a organização de diretórios do seu repositório e que itens/arquivos devem ser armazenados em cada diretório.]_
+
+|Item / Arquivo        |Diretótio                                                           |
+|----------------------|-----------------------------------------------------------------------------------------|
+|• Plano do Projeto <br>                                                                                                • Plano de Gerência de Configuração <br>                                                                                • Plano de Testes <br>                                                                                                  • Plano de Implantação  <br>                 |C:\ > Sistemas > Nome do projeto > Planos
+|• Diagrama de Classes <br>                                                                                              • Diagrama de Casos de Uso <br>                                                                                         • Código-Fonte                              |C:\ > Sistemas > Nome do projeto > Módulo > Doc. Requisitos        |
+|• Cenários de Testes <br>                                                                                              • Casos de Testes <br>                                                                                                  • Sumário de Testes <br>                     |C:\ > Sistemas > Nome do projeto > Módulo > Doc. Testes            |
+|• Entrega de Release                        |C:\ > Sistemas > Nome do projeto > Releases                        |
 
 3.2 Controle de Configuração e Mudança
 --------------------------------------
 
 ### 3.2.1 Processamento e Aprovação de Solicitações de Mudança
-_[Descreva o processo pelo qual os problemas e as mudanças são submetidos, revisados e dispostos. Inclua como funciona a transição de estados de uma solicitação de mudança]_
+
+A.	As mudanças, bem como etapas das mesmas devem ser registradas através da ferramenta Redmine. <br>                   
+B.	Podem solicitar mudanças:
+* **Clientes / Usuários**
+* **Diretoria**
+* **Gerente de Projeto**
+* **Analistas de Requisitos**
+* **Analistas de Testes**
+* **Desenvolvedores**
+* **Equipe de Suporte**
+
+C.	As mudanças deverão seguir o fluxo à seguir:
+* **Aberta**: status inicial da solicitação de mudança.
+*	**Análise**: etapa onde é analisado o impacto e viabilidade da mudança. Há dois resultados possíveis da análise:
+* **Aprovada**: a solitação de mudança é encaminhada para a fase de execução.
+* **Reprovada**: a solicitação de mudança é arquivada, com as devidas justificativas.
+* **Em Execução**: nessa etapa é desenvolvida as documentações necessárias referentes a requisitos, dependendo da solicitação, e logo após a mudança é codificada.
+* **Testes**: são criadas as documentações de testes, bem como executados, registrados e analisados os testes necessários.
+* **Retornada**: após os testes, a tarefa deve retornar para a etapa de execução devido a ter sido encontrado bugs, e haver a necessidade de corrigí-los.
+* **Concluída**: a mudança foi realizada, testada e aprovada. Portanto, resta apenas registrar devidamente a conclusão da mesma, para que seja planejada a release na qual será disponibilizada essa mudança realizada. 
+
 
 ### 3.2.2 Comitê de Controle de Mudança (CCB)
-_[Descreva a participação e os procedimentos para processar solicitações e aprovações de mudança a serem seguidos pelo CCB. Informe quem são os membros do CCB e suas responsabilidades.]_
 
+|Dado                |Regras                                                                                     |
+|-------------------------|--------------------------------------------------------------------------------------|
+|Gerente de Projetos      |- Conduzir a reunião. <br>                                                                                              - Registrar as decisões tomadas na reunião. <br>                                                                        - Atualizar o status  da solicitação de mudanças, conforme decidido em reunião. <br>                                    - Avaliar a viabilidade e impacto da mudança.                                         |
+|Analista de Requisitos   |- Avaliar a viabilidade e impacto da mudança.                                         |
+|Líder Técnico            |- Será a opinião mais forte na avaliação sobre a viabilidade e impacto da mudança.    |
+|Analista de Testes       |- Avaliar a viabilidade e impacto da mudança. <br>                                                                      - Analisar se a mudança é testável. Deve ser citado o nome do software.               |
 
 
 4. Padrões e Procedimentos
