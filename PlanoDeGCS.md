@@ -44,13 +44,21 @@ Este documento detalha toda a infra-estrutura utilizada durante o desenvolviment
 
 1.4 Referências
 ---------------
+
 _[Esta subseção apresenta uma lista completa de todos os documentos mencionados no Plano de Gerenciamento de Configuração. Identifique os documentos por título, número de relatório (se aplicável), data e organização responsável pela publicação. Especifique as fontes a partir das quais as referências podem ser obtidas. Essas informações podem ser fornecidas por um anexo ou outro documento.]_
 
 1.5 Visão Geral
 ---------------
-_[Esta subseção descreve o conteúdo restante do Plano de Gerenciamento de Configuração e explica como o documento está organizado.]_
+As proximas seções deste documento estão organizados da seguinte forma:<br>
 
 
+|Seção    |                  Titulo                         |                  Descrição                         |
+|---------|------------------------------------------------------|------------------------------------------------------|
+|2|Gerenciamento de Configuração de Software|Nesta seção são informados as responsalibidades de cada individio da equipe e as ferramentos utilizadas na gerência de configuração no projeto |
+|3|O Programa de Gerenciamento de Configuração|Demonstra os padrões de nomenclatura, numeração, marcação diretórios que devem ser seguidos ao gerenciar as baselines e artefatos do projeto|
+|4|Padrões e Procedimentos| São abordades os detalhes sobre padrões e procedimentos a serem seguidos.|
+|5|Treinamento e Recursos|Descreve as ferramentas de software, o pessoal e o treinamento necessários para implementar as atividades de Gerenciamento de configurações especificadas|
+|6|Auditorias de Configuração|Descreve o cronograma das auditorias de configuração e o que será verificado|
 
 2. Gerenciamento de Configuração de Software
 ============================================
