@@ -65,7 +65,12 @@ As proximas seções deste documento estão organizados da seguinte forma:<br>
 
 2.1 Organização, Responsabilidades e Interfaces
 ------------------------------------------------
-_[Descreva quem será o responsável pela execução das diversas atividades de Gerenciamento de Configuração (CM) descritas no Processo de CM.]_
+|Papeis|Equipe|Responsabilidade|
+|---------|------------------------------------------------------|------------------------------------------------------|
+|Gerente de Configuração|Sergio Rodrigues| Acompanhar as alterações dos itens de configurações de um determinado projeto |
+|Gestor de ferramentas de Gerência de configuração|Paulo Igo |Manutenção da infraestrutura necessária para o bom funcionamento da Gerência de configuração no conjunto dos projetos da organização, ou no contexto do projeto, se for o caso |
+|Gestor de Configuração de Software| Augusto Magalhães |Responsável por aprovar e gerenciar as atividades relativas a Gerência de Configuração de Software, coordenar a equipe de Gerência de Configuração de Software. coordenar o trabalho de integração de sistemas |
+|Desenvolvedor| Gabriel <br> Nobre Chagas Lima |Seguir os padrões e procedimentos definidos no Plano de Gerência de Configuração |
 
 2.2 Ferramentas, Ambiente e Infra-estrutura
 -------------------------------------------
