@@ -127,16 +127,46 @@ _[Descreva a participação e os procedimentos para processar solicitações e a
 
 4. Padrões e Procedimentos
 ==========================
-_[Descreva os padrões e procedimentos que devem ser seguidos no projeto. Crie subseções se achar necessário, para organizá-los melhor.]_
+Gerencia de configuração é um processo que cada vez mais vem chamando atenção de quem está no ramo chamado TI, tudo isso visando competitividade, qualidade, produtividade e menutenibilidade, para se conseguir tudo isso é importante ter um entendimento sobre padrões bem definido, saber quando é necessario usar padrão A ou B e identificar quais ferramentas suportam quais padrões.
+Padrões são independentes de feramentas, algumas ferramentas suportam padrões explicitamente e outras menos diretamente, como por exemplo de algumas ferramentas que não suportam branching e merging tão bem quantos outras, essa praticas não são executadas sem apoio de ferramentas.
+Existem diversos padrões a serem seguidos dependendo de como cada necessidade se encaixa com determinado padrão até mesmo padrões que se aplicados em conjunto com outros trabalharam de forma mais eficiente por isso é importante ter um alto conhecimento quando se aplica-los, existem vários padrões que são eles, mainline, active development line, private workspace, repository, private system build, integration build entre outros, alguns destes seram especificados iniciando pelo mainline: 
+
+Mainline:  
+O padrão mainline mostra como gerenciar a codeline para minimizar esforços com integração que branching e merging requerem se não usamos branchs, perdemos a isolação que ele oferece e cada membro da equipe precisa disputar a aquisição do artefato para realizarem suas tarefas e aquele que consegue o artefato, seqüestra-o para realizar suas mudanças enquanto os demais candidatos a adquirí-lo esperam na fila. 
+Por outro lado, se usamos branchs aumentamos o desenvolvimento concorrente entre os membros da equipe, mas em muitos casos, os códigos precisam trabalhar juntos de qualquer forma e precisamos alocar recursos para integrar a mudanças paralelas, a razão para trabalhar com uma mainline é para ter uma codeline central que seja base para subbranches e para acomodar seus merges. 
+A mainline para um projeto geralmente inicia com o código base do release anterior, ou se estamos iniciando um novo projeto, temos somente uma codeline que é a própria mainline, trabalhar com uma mainline não significa "não fazer branch", significa que todas as atividades desenvolvidas sobre os artefatos são refletidas sempre sobre uma simples codeline em um determinado momento.
+
+Active development line: 
+Oactive development line ajuda a balancear estabilidade e progresso no desenvolvimento do produto sobre a mainline. Digamos que o padrão Mainline precisa do padrão Active Development Line para ser executado de forma completa ou eficiente. 
+Para aumentar a performance de um desenvolvimento em equipe desejamos aumentar a quantidade de membros da equipe trabalhando na suas atividades de forma concorrente e também aumentar a comunicação entre esses membros para diminuir conflitos entre as suas atividades, essa comunicação é implementada através dos pontos de sincronização onde os trabalhos de todos os membros serão integrados e suas dependências serão gerenciadas para evitar deadlock e blocking.
+Deadlocks são causados por dependências múltiplas e blocks ocorrem quando alguém reserva um artefato para editá-lo e passa muito tempo para liberá-lo para as outras pessoas, quando alguém check-in uma mudança para a mainline, esta pessoa pode causar atrasos a toda a equipe a sua mudança impacta o trabalho dos demais. Então seria necessário antes de executar o check-in testar as mudanças com a última versão dos artefatos da mainline para observar qualquer incompatibilidade.
+
+Repository:
+Este padrão mostra como construir uma área de trabalho local facilmente e com a configuração necessária. Quando vamos realizar uma mudança sobre o sistema precisamos de uma área onde possamos acomodar as corretas versões dos arquivos do sistema para realizar a mudança, e testa-la de forma isolada, queremos obter os elementos da área de trabalho facilmente tal que possamos confiantemente criar um ambiente que permita-nos fazer nosso trabalho com a versão correta do software, por exemplo, quando vamos corrigir um erro de uma versão anterior do software. A criação manual de uma área de trabalho gasta muito tempo. E podem levar a erros de configuração por não pegarem a versão correta de um componente. Dessa forma, precisamos de um mecanismo simples e repetível para criar uma área de trabalho. Poderíamos criar áreas de trabalho que contivessem artefatos de alguma versão identificável do produto, como artefatos de uma determinada release, por exemplo. O mecanismo poderia também facilitar a necessidade de atualização da área de trabalho quando uma nova release fosse criada. 
+
+Private System Build:
+No padrão Private System Build cada membro da equipe pode trabalhar de forma isolada das mudanças realizadas pelos demais mas esses trabalhos precisam ser sincronizados em um determinado momento para compor o sistema de forma íntegra, para isso é necessário realizar builds locais no sistema consistentemente e incluindo as novas mudanças e este padrão explica como podemos verificar se as mudanças sendo desenvolvidas nas áreas de trabalhos estão consistentes com a atual configuração da codeline, antes de publicá-las.
+Em uma equipe de desenvolvimento com política liberal de codelines, mudanças acontecem muito rapidamente. O código existente é mudado, novos módulos são adicionados a codeline, e as dependências podem mudar.O único verdadeiro teste para avaliar a compatibilidade das mudanças é através da realização de builds centralizados da área de trabalho de integração que acomoda todas as mudanças de todos os membros da equipe. Os builds privados eliminam alguns possíveis erros sobre as mudanças realizadas na área de trabalho, mas não garantem que apareçam erros no builds noturnos quando todas as mudanças são integradas.
+
+
+
+
+
+
+
 
 
 
 5. Treinamento e Recursos
 =========================
-_[Descreva as ferramentas de software, o pessoal e o treinamento necessários para implementar as atividades de CM especificadas.]_
-
+|      Treinamento          |                Objetivo               |      Publico Alvo     |
+|---------------------------|---------------------------------------|-----------------------|
+|      Repositório(SVN)     | Capacitar o pessoal para o uso do SVN<br> acessando o repositorio de uma maquina cliente<br> incluir e excluir novos itens e os comandos principais do repositorio | Toda equipe envolvida no desenvolvimento.|
 
 
 6. Auditorias de Configuração
 =============================
-_[Descreva o cronograma das auditorias de configuração e o que será verificado. Informe também como serão reportados os problemas encontrados e onde sera feito o acompanhamento dos itens corretivos.]_
+A função de auditoria de configuração geralmente ocorre quando a release deve ser criada. Suas atividades são: auditoria funcional e auditoria física.
+Audutoria Física: tem o objetivo de identificar se a release está completa em relação ao que foi acordado em cláusulas no contrato, os passos são: identificar a baseline a ser implentada(pode ser apenas um nome mas também pode ser uma lista completa de todos os componentes), confirmar que todos os artefatos necessarios conforme ezspecificado no caso de desenvolvimento estçai presente  na baseline.
+Auditoria Funcional: A auditoria funcional verifica se uma baseline atende os requisitos estabelecidos e também abrange a revisão dos planos, dados, metodologia e resultados dos testes, assegurando que a release cumpre corretamente o que foi especifiado. Os passos são: preparar relatório que lista cada requisito estabelecido para a baseline, confirmar que cada requisito passou por um ou mais testes e que o resultado de todos esses testes doi aprovado e gerar uma lista das CR's estabelecidas para essa baseline, confirmando que cada CR foi fechada.
+
