@@ -16,8 +16,8 @@ Histórico de Versões
 |Data                |Versão       |Descrição               |Autor          |
 |--------------------|-------------|------------------------|---------------|
 |   05/12/2013       |    1.0      |   Criação do Documento |Daniel Gregory |
-|_&lt;dd/mm/aaaa&gt;_|_&lt;1.1&gt;_|_&lt;Outra versão&gt;_  |_&lt;autor&gt;_|
-
+|   09/12/2013       |    1.1      | Alteração do Documento | Gabriel Nobre |
+|   09/12/2013       |    1.2      | Alteração do Documento |C. Augusto Magalhaes |
 
 
 1. Introdução
