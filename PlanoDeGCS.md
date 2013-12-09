@@ -14,56 +14,76 @@ Histórico de Versões
 
 |Data                |Versão       |Descrição               |Autor          |
 |--------------------|-------------|------------------------|---------------|
-|_&lt;dd/mm/aaaa&gt;_|_&lt;1.0&gt;_|_&lt;Versão inicial&gt;_|_&lt;autor&gt;_|
+|   05/12/2013       |    1.0      |   Criação do Documento |Daniel Gregory |
 |_&lt;dd/mm/aaaa&gt;_|_&lt;1.1&gt;_|_&lt;Outra versão&gt;_  |_&lt;autor&gt;_|
 
 
 
 1. Introdução
 ==============
+O Plano de Gerenciamento de Configuração descreve todas as atividades do Gerenciamento de Controle de Configuração e Mudança que serão executadas durante o ciclo de vida do produto. Suas atividades envolvem identificar a configuração do software, manter sua integridade durante o projeto e controlar sistematicamente as mudanças do projeto de Remoção.
 
-_[A introdução do Plano de Gerenciamento de Configuração  oferece uma visão geral de todo o documento. 
-Ela inclui a finalidade, o escopo, as definições, os acrônimos, as abreviações, as referências e uma visão geral deste
-Plano de Gerenciamento de Configuração.]_
+
 
 1.1 Finalidade
 ---------------
-_[Especifique a finalidade deste Plano de Gerenciamento de Configuração.]_
+Este documento tem por objetivo principal descrever a organização, nomenclatura e regras para o versionamento do projeto Remoção, criando um padrão a ser seguido por toda equipe garantindo maior controle do projeto.
 
 1.2 Escopo
 ----------
-_[Uma breve descrição do escopo deste Plano de Gerenciamento de Configuração; o modelo ao qual ele está associado e tudo o que é afetado ou influenciado por este documento.]_
+Este documento detalha toda a infra-estrutura utilizada durante o desenvolvimento do projeto Remoção sendo destinado a todos os participantes do desenvolvimento deste projeto.
 
 1.3 Definições, Acrônimos e Abreviações
 ---------------------------------------
-_[Esta subseção apresenta as definições de todos os termos, acrônimos e abreviações necessários para a correta interpretação do Plano de Gerenciamento de Configuração.  Essas informações podem ser fornecidas mediante referência ao Glossário do projeto.]_
+
+|Termo               |                  Significado                         |
+|--------------------|------------------------------------------------------|
+|SVN| Subversion |
+|CR|Change Request |
+
+
 
 1.4 Referências
 ---------------
-_[Esta subseção apresenta uma lista completa de todos os documentos mencionados no Plano de Gerenciamento de Configuração. Identifique os documentos por título, número de relatório (se aplicável), data e organização responsável pela publicação. Especifique as fontes a partir das quais as referências podem ser obtidas. Essas informações podem ser fornecidas por um anexo ou outro documento.]_
+
+•	Template de Plano de Gerenciamento de Configuração, 1987-2001, IBM.<br>
+•	Plano de Gerenciamento do Projeto Remoção 
+
 
 1.5 Visão Geral
 ---------------
-_[Esta subseção descreve o conteúdo restante do Plano de Gerenciamento de Configuração e explica como o documento está organizado.]_
+As proximas seções deste documento estão organizados da seguinte forma:<br>
 
 
+|Seção    |                  Titulo                         |                  Descrição                         |
+|---------|------------------------------------------------------|------------------------------------------------------|
+|2|Gerenciamento de Configuração de Software|Nesta seção são informados as responsalibidades de cada individio da equipe e as ferramentos utilizadas na gerência de configuração no projeto |
+|3|O Programa de Gerenciamento de Configuração|Demonstra os padrões de nomenclatura, numeração, marcação diretórios que devem ser seguidos ao gerenciar as baselines e artefatos do projeto|
+|4|Padrões e Procedimentos| São abordades os detalhes sobre padrões e procedimentos a serem seguidos.|
+|5|Treinamento e Recursos|Descreve as ferramentas de software, o pessoal e o treinamento necessários para implementar as atividades de Gerenciamento de configurações especificadas|
+|6|Auditorias de Configuração|Descreve o cronograma das auditorias de configuração e o que será verificado|
 
 2. Gerenciamento de Configuração de Software
 ============================================
 
 2.1 Organização, Responsabilidades e Interfaces
 ------------------------------------------------
-_[Descreva quem será o responsável pela execução das diversas atividades de Gerenciamento de Configuração (CM) descritas no Processo de CM.]_
+|Papeis|Equipe|Responsabilidade|
+|---------|------------------------------------------------------|------------------------------------------------------|
+|Gerente de Configuração|Sergio Rodrigues| Acompanhar as alterações dos itens de configurações de um determinado projeto |
+|Gestor de ferramentas de Gerência de configuração|Paulo Igo |Manutenção da infraestrutura necessária para o bom funcionamento da Gerência de configuração no conjunto dos projetos da organização, ou no contexto do projeto, se for o caso |
+|Gestor de Configuração de Software| Augusto Magalhães |Responsável por aprovar e gerenciar as atividades relativas a Gerência de Configuração de Software, coordenar a equipe de Gerência de Configuração de Software. coordenar o trabalho de integração de sistemas |
+|Desenvolvedor| Gabriel <br> Nobre Chagas Lima |Seguir os padrões e procedimentos definidos no Plano de Gerência de Configuração |
 
 2.2 Ferramentas, Ambiente e Infra-estrutura
 -------------------------------------------
-_[Descreva o ambiente de computação e as ferramentas de software a serem utilizadas para desempenhar as funções de CM em todo o ciclo de vida do projeto ou produto._
-_Descreva as ferramentas e os procedimentos necessários utilizados para o controle de versão dos itens de configuração gerados no ciclo de vida do projeto ou produto._
-_As questões envolvidas na configuração do ambiente de CM incluem:_
-* _tamanho previsto dos dados do produto_
-* _distribuição da equipe do produto_
-* _localização física dos servidores e clientes]_
- 
+
+|Ferramenta          |Descrição               |Versão          |
+|--------------------|------------------------|---------------|
+| TortoiseSVN        |  Ferramenta gráfica para gerenciamento no sistema de controle de versão|1.7.11 |
+| Subersion          |  Sistema de Controle de Versão|1.7.8 |
+
+
 
 
 3. O Programa de Gerenciamento de Configuração
