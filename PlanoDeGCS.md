@@ -202,7 +202,7 @@ Nome do projeto: sistemaRemocao<br>
 Caminho repositório:
 http://srvapp.jfce.jus.br/desenvolvimento/documentacaosades/projetos/PRJ SADES 029 - sistemaRemoção
 
-Abaixo segue o padrão para identificar os documentos e artefatos:
+Abaixo segue o padrão para identificar os documentos e artefatos:<br>
 I18N - Tabela de Internacionalização;
 MAN – Manual;
 DOC - Documento não classificado;
