@@ -146,7 +146,12 @@ Em uma equipe de desenvolvimento com política liberal de codelines, mudanças a
 
 6. Auditorias de Configuração
 =============================
-A função de auditoria de configuração geralmente ocorre quando a release deve ser criada. Suas atividades são: auditoria funcional e auditoria física.
-Audutoria Física: tem o objetivo de identificar se a release está completa em relação ao que foi acordado em cláusulas no contrato, os passos são: identificar a baseline a ser implentada(pode ser apenas um nome mas também pode ser uma lista completa de todos os componentes), confirmar que todos os artefatos necessarios conforme ezspecificado no caso de desenvolvimento estçai presente  na baseline.
-Auditoria Funcional: A auditoria funcional verifica se uma baseline atende os requisitos estabelecidos e também abrange a revisão dos planos, dados, metodologia e resultados dos testes, assegurando que a release cumpre corretamente o que foi especifiado. Os passos são: preparar relatório que lista cada requisito estabelecido para a baseline, confirmar que cada requisito passou por um ou mais testes e que o resultado de todos esses testes doi aprovado e gerar uma lista das CR's estabelecidas para essa baseline, confirmando que cada CR foi fechada.
+A função de auditoria de configuração geralmente ocorre quando a release deve ser criada. Suas atividades são: auditoria funcional e auditoria física.<br>
+Audutoria Física: tem o objetivo de identificar se a release está completa em relação ao que foi acordado em cláusulas no contrato, os passos são: identificar a baseline a ser implentada(pode ser apenas um nome mas também pode ser uma lista completa de todos os componentes), confirmar que todos os artefatos necessarios conforme ezspecificado no caso de desenvolvimento estçai presente  na baseline.<br>
+Auditoria Funcional: A auditoria funcional verifica se uma baseline atende os requisitos estabelecidos e também abrange a revisão dos planos, dados, metodologia e resultados dos testes, assegurando que a release cumpre corretamente o que foi especifiado. Os passos são: preparar relatório que lista cada requisito estabelecido para a baseline, confirmar que cada requisito passou por um ou mais testes e que o resultado de todos esses testes doi aprovado e gerar uma lista das CR's estabelecidas para essa baseline, confirmando que cada CR foi fechada.<br>
+Caso algo de errado seja encontrado na auditoria é necessário seguir alguns passos com por exemplo:<br>
+Analisar e identificar o que deve ser feito para a correção, pode ser que nesta ação seja necessário entrevistas com alguns membros da equipe para que todos ajude a encontrar o que ocasionou o problema.<br>
+Caso encontre-se artefatos ausentes o que geralmente se faz é criar uma CR ou uma tarefa que fará o artefato que esteja faltando.<br>
+Caso haja alguma CR para ser resolvida ela pode ser testada para ver se está tudo correto ou  adiada para alguma baseline posterior.
+
 
